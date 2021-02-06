@@ -4,7 +4,7 @@ import './App.css';
 
 import Navigation from './components/Navigation'
 import NotesList from './components/NotesList'
-import CreateNotes from './components/CreateNotes'
+import CreateNotes from './components/CreateNote'
 import CreateUser from './components/CreateUser'
 
 function App() {
