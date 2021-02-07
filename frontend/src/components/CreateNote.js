@@ -55,7 +55,7 @@ export default class CreateNote extends Component {
                         </select>
                     </div>
 
-                    <div className="form-group">
+                    <div className="form-group mt-3" >
                         <input 
                             type="text" 
                             className="form-control" 
@@ -65,7 +65,7 @@ export default class CreateNote extends Component {
                             required/>
                     </div>
 
-                    <div className="form-group">
+                    <div className="form-group mt-3">
                         <textarea 
                             name="content"
                             className="form-control"
@@ -76,7 +76,7 @@ export default class CreateNote extends Component {
                         </textarea>
                     </div>
 
-                    <div className="form-group">
+                    <div className="form-group mt-3">
                         <DatePicker 
                             className="form-control"
                             selected={this.state.date}
@@ -84,7 +84,7 @@ export default class CreateNote extends Component {
                     </div>
 
                     <form onSubmit={this.onSubmit}>
-                        <button type="submit" className="btn btn-primary">
+                        <button type="submit" className="btn btn-primary mt-3">
                             Save
                         </button>
                     </form>

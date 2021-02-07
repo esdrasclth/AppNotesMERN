@@ -53,7 +53,7 @@ export default class CreateUser extends Component {
                                 value={this.state.username}
                                 onChange={this.onChangeUserName} />
                             </div>
-                            <button type="submit" className="btn btn-primary">
+                            <button type="submit" className="btn btn-primary mt-3">
                                 Save
                             </button>
                         </form>
