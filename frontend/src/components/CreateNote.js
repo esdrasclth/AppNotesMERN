@@ -15,12 +15,22 @@ export default class CreateNote extends Component {
 
     async componentDidMount() {
         const res = await axios.get('http://localhost:4000/api/users');
-        this.setState({users: res.data.map(user => user.username)})
+        this.setState({
+            users: res.data.map(user => user.username),
+            userSelected: res.data[0].username
+        })
     }
 
-    onSubmit = (e) => {
-        console.log(this.state.title, this.state.content)
+    onSubmit = async (e) => {
         e.preventDefault();
+        const newNote = {
+            title: this.state.title,
+            author: this.state.userSelected,
+            content: this.state.content,
+            date: this.state.date
+        };
+        await axios.post('http://localhost:4000/api/notes', newNote);
+        window.location.href = '/';
     }
 
     onInputChange = e => {
