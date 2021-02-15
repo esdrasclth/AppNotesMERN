@@ -14,7 +14,7 @@ export default class CreateUser extends Component {
     }
 
     getUsers = async () => {
-        const res = await axios.get('http://localhost:4000/api/users');
+        const res = await axios.get('https://api-notes-applications.herokuapp.com/api/users');
         this.setState({ users: res.data });
     }
 
@@ -27,7 +27,7 @@ export default class CreateUser extends Component {
 
     onSubmit = async e => {
         e.preventDefault();
-        await axios.post('http://localhost:4000/api/users', {
+        await axios.post('https://api-notes-applications.herokuapp.com/api/users', {
             username: this.state.username
         })
         this.setState({username:''});
@@ -35,7 +35,7 @@ export default class CreateUser extends Component {
     }
 
     deleteUser = async (id) => {
-        await axios.delete('http://localhost:4000/api/users/' + id);
+        await axios.delete('https://api-notes-applications.herokuapp.com/api/users/' + id);
         this.getUsers();
     }
 
